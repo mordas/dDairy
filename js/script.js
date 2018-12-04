@@ -1,10 +1,10 @@
 "use strict"
 let parentElem = document.body;
 let dairy = {};
-let btnMin = document.getElementById('min'),
-    btnNorm = document.getElementById('norm'),
-    btnMax = document.getElementById('max'),
-    btnFix = document.getElementById('fix');
+let btnMin = document.querySelector('#min'),
+    btnNorm = document.querySelector('#norm'),
+    btnMax = document.querySelector('#max'),
+    btnFix = document.querySelector('#fix');
 
 
     
@@ -33,7 +33,19 @@ let rndAsk = (num) => {
 };
 
 
-btnMin.addEventListener('click',rndAsk(12));
+btnMin.addEventListener("click", rndAsk(5));
+btnNorm.addEventListener("click", rndAsk(12));
+//btnMin.addEventListener("click", function(){
+  //  for (let i = 0; i <= Math.random() * num; i++){
+
+   // let note = prompt('Напиши что-нибудь'),
+  //  textNote = document.createElement('div');
+   // 
+   // textNote.className = ('notes');
+//textNote.innerHTML = note;
+  //  parentElem.appendChild(textNote);});
+
+console.log(btnMin);
 
 
 ///rndAsk(10);
