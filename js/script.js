@@ -1,24 +1,47 @@
-var parentElem = document.body
-ask = () => {
-    let note = prompt('Напиши что-нибудь?');
-        div = document.createElement('div');
-    div.className = ('notes');
-    div.innerHTML = note ;
-    parentElem.appendChild(div);
-    }
+let parentElem = document.body;
+let dairy = {};
+// ask = () => {
+//     let note = prompt('Напиши что-нибудь?');
+//         textNote = document.createElement('div');
+//         textNote.className = ('notes');
+//         textNote.innerHTML = note ;
+//         parentElem.appendChild(textNote);
+
+//      let date = new Date();
+//          dateDiv = document.createElement('div');
+//          dateDiv.className = ('date');
+//          dateDiv.innerHTML = `${date.getFullYear()} ${date.getMonth()} ${date.getDay()} ${date.getHours()} часов`;
+//          textNote.appendChild(dateDiv);    
+//     };
+   
+
+
+
+
+
+    
 
 rndAsk = (num) => {
     for (let i = 0; i <= Math.random() * num; i++){
-        ask();
+        ask = () => {
+            let note = prompt('Напиши что-нибудь?');
+                textNote = document.createElement('div');
+                textNote.className = ('notes');
+                textNote.innerHTML = note ;
+                parentElem.appendChild(textNote);
+        
+             let date = new Date();
+                 dateDiv = document.createElement('div');
+                 dateDiv.className = ('date');
+                 dateDiv.innerHTML = `${date.getFullYear()} ${date.getMonth()} ${date.getDay()} ${date.getHours()} часов`;
+                 textNote.appendChild(dateDiv); 
+                 dairy[date] = note;     
+            };
+            ask();
+
     }
 }
 
 
-
-//ask = () => {
-//let note = prompt('Напиши что-нибудь?');
- //   notes = document.querySelector('.notes');
-//notes.textContent = note;
-//}
-///ask();
 rndAsk(10);
+console.log(dairy);
