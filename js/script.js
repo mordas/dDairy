@@ -26,6 +26,7 @@ let rndAsk = (num) => {
             dateDiv.innerHTML = `${date.getFullYear()} ${date.getMonth()} ${date.getDay()} ${date.getHours()} часов`;
             textNote.appendChild(dateDiv);
             dairy[date] = note;
+            localStorage.setItem(date, note);
         };
         ask();
 
@@ -42,3 +43,4 @@ btnNorm.addEventListener("click", () => {
 btnMax.addEventListener("click", () => {
     rndAsk(24)
 });
+localStorage.setItem('ddairy', rndAsk;
